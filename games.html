@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="STACKLY Games - Explore our premium collection of FPS, Action, Adventure, Racing, Strategy, Sports, Simulation, and RPG games."
+    />
+    <meta
+      name="keywords"
+      content="STACKLY games, premium games, PC games, console games, RPG, FPS, action, adventure"
+    />
+    <title>STACKLY - Games | Premium Gaming Collection</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAgA0JaQAA3AA/vuUAAA="
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="css/games.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo"
+          ><img
+            class="logo"
+            src="./assets/logo.webp"
+            alt="STACKLY Logo"
+            width="48"
+            height="48"
+            onclick="window.location.href = 'index.html'"
+            style="cursor: pointer"
+        /></a>
+        <ul class="navbar-menu" id="navbarMenu">
+          <li role="none"><a href="index.html" class="navbar-link">Home</a></li>
+          <li role="none">
+            <a href="games.html" class="navbar-link">Games</a>
+          </li>
+          <li role="none">
+            <a href="about.html" class="navbar-link active" aria-current="page"
+              >About</a
+            >
+          </li>
+          <li role="none"><a href="blog.html" class="navbar-link">Blog</a></li>
+          <li role="none">
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-actions">
+          <button
+            class="btn btn-outline btn-sm login-btn"
+            onclick="window.location.href = 'login.html'"
+          >
+            Login</button
+          ><button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="hamburger-line"></span
+            ><span class="hamburger-line"></span
+            ><span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-bg"></div>
+      <div class="mobile-menu-content">
+        <a href="index.html" class="mobile-link">Home</a
+        ><a href="games.html" class="mobile-link">Games</a
+        ><a href="about.html" class="mobile-link active">About</a
+        ><a href="blog.html" class="mobile-link">Blog</a
+        ><a href="contact.html" class="mobile-link">Contact</a
+        ><button
+          class="btn btn-primary mobile-login-btn"
+          onclick="window.location.href = 'login.html'"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+    <main>
+      <section class="section" style="padding-top: 7rem">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-badge">🎮 Game Library</span>
+            <h2 class="section-title">All <span class="accent">Games</span></h2>
+            <p class="section-subtitle">
+              Discover your next obsession from our handpicked collection.
+            </p>
+          </div>
+          <div
+            class="games-filter"
+            role="group"
+            aria-label="Filter games by category"
+          >
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="fps">FPS</button>
+            <button class="filter-btn" data-filter="action">Action</button>
+            <button class="filter-btn" data-filter="adventure">
+              Adventure
+            </button>
+            <button class="filter-btn" data-filter="racing">Racing</button>
+            <button class="filter-btn" data-filter="strategy">Strategy</button>
+            <button class="filter-btn" data-filter="sports">Sports</button>
+            <button class="filter-btn" data-filter="simulation">
+              Simulation
+            </button>
+            <button class="filter-btn" data-filter="rpg">RPG</button>
+          </div>
+          <div class="games-grid">
+            <!-- 12 game cards with data-category -->
+            <article class="game-card" data-category="fps">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1542751110-97427bbecf20?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="FPS game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">FPS</span
+                ><span class="game-card-rating">⭐ 4.9</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Strike Force X</h3>
+                <p class="game-card-desc">
+                  Tactical team shooter with stunning visuals.
+                </p>
+                <div class="game-card-meta">
+                  <span>PC, PS5</span><span>5.1M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="action">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="./assets/g1.webp"
+                  alt="Action RPG"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Action RPG</span
+                ><span class="game-card-rating">⭐ 4.8</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Cyber Legends</h3>
+                <p class="game-card-desc">Dystopian future epic.</p>
+                <div class="game-card-meta">
+                  <span>PC, Xbox</span><span>2.4M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="adventure">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="Adventure game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Adventure</span
+                ><span class="game-card-rating">⭐ 4.7</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Lost Realms</h3>
+                <p class="game-card-desc">Open-world exploration.</p>
+                <div class="game-card-meta">
+                  <span>PC, Switch</span><span>1.8M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="racing">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="Racing game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Racing</span
+                ><span class="game-card-rating">⭐ 4.6</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Nitro Drift</h3>
+                <p class="game-card-desc">High-speed street racing.</p>
+                <div class="game-card-meta">
+                  <span>PC, PS5, Xbox</span><span>3.2M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="strategy">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1560419015-7c427e8ae5ba?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="Strategy game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Strategy</span
+                ><span class="game-card-rating">⭐ 4.5</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Empire Wars</h3>
+                <p class="game-card-desc">Build your civilization.</p>
+                <div class="game-card-meta">
+                  <span>PC</span><span>1.2M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="sports">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="./assets/g2.webp"
+                  alt="Sports game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Sports</span
+                ><span class="game-card-rating">⭐ 4.4</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Ultimate Soccer</h3>
+                <p class="game-card-desc">Realistic football simulation.</p>
+                <div class="game-card-meta">
+                  <span>PS5, Xbox</span><span>4.1M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="simulation">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="./assets/g3.webp"
+                  alt="Simulation game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Simulation</span
+                ><span class="game-card-rating">⭐ 4.3</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Flight Sim Pro</h3>
+                <p class="game-card-desc">Ultra-realistic flying.</p>
+                <div class="game-card-meta">
+                  <span>PC</span><span>0.9M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="rpg">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="./assets/g4.webp"
+                  alt="RPG game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">RPG</span
+                ><span class="game-card-rating">⭐ 4.9</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Dragon Quest Realms</h3>
+                <p class="game-card-desc">Epic fantasy adventure.</p>
+                <div class="game-card-meta">
+                  <span>PC, PS5</span><span>2.8M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="fps">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="FPS game 2"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">FPS</span
+                ><span class="game-card-rating">⭐ 4.7</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Shadow Ops</h3>
+                <p class="game-card-desc">Stealth action shooter.</p>
+                <div class="game-card-meta">
+                  <span>PC</span><span>3.5M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="action">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1511882150382-421056c89033?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="Action game"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Action</span
+                ><span class="game-card-rating">⭐ 4.6</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Blade Master</h3>
+                <p class="game-card-desc">Sword fighting combat.</p>
+                <div class="game-card-meta">
+                  <span>PC, PS5, Xbox</span><span>1.5M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="adventure">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="Adventure game 2"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Adventure</span
+                ><span class="game-card-rating">⭐ 4.8</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Star Seeker</h3>
+                <p class="game-card-desc">Space exploration saga.</p>
+                <div class="game-card-meta">
+                  <span>PC</span><span>2.1M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+            <article class="game-card" data-category="racing">
+              <div class="game-card-image-wrapper">
+                <img
+                  src="https://images.unsplash.com/photo-1502161254066-6c74afbf07aa?w=600&h=400&fit=crop&fm=webp&q=80"
+                  alt="Racing game 2"
+                  class="game-card-image"
+                  loading="lazy"
+                />
+                <div class="game-card-overlay"></div>
+                <span class="game-card-genre">Racing</span
+                ><span class="game-card-rating">⭐ 4.5</span>
+              </div>
+              <div class="game-card-content">
+                <h3 class="game-card-title">Turbo GT</h3>
+                <p class="game-card-desc">Gran turismo style racing.</p>
+                <div class="game-card-meta">
+                  <span>PS5</span><span>1.1M Players</span>
+                </div>
+                <a href="./404.html" class="btn btn-primary btn-sm btn-full"
+                  >Play Now</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo" aria-label="STACKLY Home">
+              <img
+                class="logo"
+                src="./assets/logo.webp"
+                alt="STACKLY Logo"
+                width="40"
+                height="40"
+              />
+              <!-- <span class="logo-text">STACKLY</span> -->
+            </a>
+            <p>
+              The ultimate gaming platform for players worldwide. Discover,
+              connect, and dominate.
+            </p>
+            <div class="footer-social">
+              <a href="./404.html" class="social-link" aria-label="Discord"
+                >💬</a
+              >
+              <a href="./404.html" class="social-link" aria-label="Twitter"
+                >🐦</a
+              >
+              <a href="./404.html" class="social-link" aria-label="YouTube"
+                >▶️</a
+              >
+              <a href="./404.html" class="social-link" aria-label="Twitch"
+                >📺</a
+              >
+              <a href="./404.html" class="social-link" aria-label="Instagram"
+                >📷</a
+              >
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-links">
+            <h4>Games</h4>
+            <a href="games.html?category=fps">FPS</a>
+            <a href="games.html?category=action">Action</a>
+            <a href="games.html?category=rpg">RPG</a>
+            <a href="games.html?category=racing">Racing</a>
+            <a href="games.html?category=strategy">Strategy</a>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <a href="blog.html">Blog</a>
+            <a href="./404.html">FAQ</a>
+            <a href="./404.html">Support</a>
+            <a href="./404.html">Privacy Policy</a>
+            <a href="./404.html">Terms of Service</a>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Get gaming news straight to your inbox.</p>
+            <form
+              class="footer-newsletter-form"
+              aria-label="Footer newsletter"
+              action="./404.html"
+            >
+              <input
+                type="email"
+                class="input-field"
+                placeholder="Your email"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" class="btn btn-primary btn-sm">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 STACKLY. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="./404.html">Privacy Policy</a>
+            <a href="./404.html">Terms</a>
+            <a href="./404.html">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg width="20" height="20" viewBox="0 0 24 24">
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+      </svg>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./main.js"></script>
+    <!-- <script src="js/games.js"></script> -->
+  </body>
+</html>

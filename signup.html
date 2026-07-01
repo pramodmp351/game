@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="STACKLY Sign Up - Create your gaming account"
+    />
+    <title>STACKLY - Sign Up</title>
+    <link rel="icon" type="image/webp" href="./assets/logo.webp" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg-primary: #0b0d17;
+        --bg-secondary: #121622;
+        --bg-card: #1a2032;
+        --accent: #7c5cff;
+        --accent-light: #a992ff;
+        --pink: #ff3cac;
+        --text: #f5f7fa;
+        --text-light: #b8c1d1;
+        --border: rgba(255, 255, 255, 0.08);
+        --radius: 1.25rem;
+        --radius-sm: 0.75rem;
+        --transition: 0.3s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        font-size: 16px;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background: var(--bg-primary);
+        color: var(--text);
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem 1rem;
+        position: relative;
+        overflow-x: hidden;
+      }
+
+      .bg-glow {
+        position: fixed;
+        top: -150px;
+        left: -150px;
+        width: 500px;
+        height: 500px;
+        background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+        opacity: 0.1;
+        border-radius: 50%;
+        filter: blur(40px);
+        pointer-events: none;
+      }
+
+      .signup-container {
+        width: 100%;
+        max-width: 460px;
+        background: var(--bg-card);
+        border-radius: var(--radius);
+        padding: 2.5rem 2rem;
+        border: 1px solid var(--border);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(10px);
+        position: relative;
+        z-index: 2;
+      }
+
+      .logo-area {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .logo-area img {
+        width: 60px;
+        height: 60px;
+        margin: 0 auto 0.5rem;
+        filter: drop-shadow(0 0 12px var(--accent));
+      }
+
+      .logo-text {
+        font-family: "Orbitron", sans-serif;
+        font-weight: 800;
+        font-size: 2rem;
+        letter-spacing: 2px;
+        background: linear-gradient(
+          135deg,
+          var(--text) 0%,
+          var(--accent-light) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      h1 {
+        font-family: "Orbitron", sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+
+      .form-group {
+        margin-bottom: 1.5rem;
+      }
+
+      label {
+        display: block;
+        font-size: 0.85rem;
+        margin-bottom: 0.4rem;
+        color: var(--text-light);
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-weight: 500;
+      }
+
+      input,
+      select {
+        width: 100%;
+        padding: 0.85rem 1.2rem;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 999px;
+        color: var(--text);
+        font-family: "Poppins", sans-serif;
+        font-size: 0.95rem;
+        outline: none;
+        transition:
+          border-color var(--transition),
+          box-shadow var(--transition);
+      }
+
+      input:focus,
+      select:focus {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 3px rgba(124, 92, 255, 0.2);
+      }
+
+      select {
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%23B8C1D1' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 1.2rem center;
+        background-size: 12px;
+        cursor: pointer;
+      }
+
+      .btn-signup {
+        width: 100%;
+        padding: 0.9rem;
+        font-family: "Orbitron", sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: linear-gradient(135deg, var(--accent) 0%, var(--pink) 100%);
+        color: white;
+        border: none;
+        border-radius: 999px;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: all var(--transition);
+        box-shadow: 0 4px 20px rgba(124, 92, 255, 0.4);
+        margin-top: 1rem;
+      }
+
+      .btn-signup:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(124, 92, 255, 0.7);
+      }
+
+      .error-message {
+        color: var(--pink);
+        font-size: 0.8rem;
+        margin-top: 0.3rem;
+        display: none;
+      }
+
+      .login-link {
+        text-align: center;
+        margin-top: 1.5rem;
+        font-size: 0.9rem;
+        color: var(--text-light);
+      }
+
+      .login-link a {
+        color: var(--accent-light);
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      @media (max-width: 480px) {
+        .signup-container {
+          padding: 2rem 1.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <div class="signup-container">
+      <div class="logo-area">
+        <img
+          src="./assets/logo.webp"
+          alt="STACKLY Logo"
+          width="60"
+          height="60"
+        />
+        <!-- <div class="logo-text">STACKLY</div> -->
+      </div>
+      <h1>Create Account</h1>
+
+      <form id="signupForm" novalidate>
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" placeholder="John Doe" required />
+          <div class="error-message" id="nameError">
+            Please enter your full name.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@email.com" required />
+          <div class="error-message" id="emailError">
+            Please enter a valid email.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="••••••••"
+            required
+            minlength="4"
+          />
+          <div class="error-message" id="passwordError">
+            Minimum 4 characters.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            placeholder="••••••••"
+            required
+          />
+          <div class="error-message" id="confirmError">
+            Passwords do not match.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="role">Register as</label>
+          <select id="role" required>
+            <option value="">Select Role</option>
+            <option value="user">User</option>
+            <option value="admin">Admin</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-signup">Sign Up</button>
+      </form>
+
+      <div class="login-link">
+        Already have an account? <a href="login.html">Log In</a>
+      </div>
+    </div>
+
+    <script>
+      const form = document.getElementById("signupForm");
+      const fullNameInput = document.getElementById("fullName");
+      const emailInput = document.getElementById("email");
+      const passwordInput = document.getElementById("password");
+      const confirmPasswordInput = document.getElementById("confirmPassword");
+      const roleSelect = document.getElementById("role");
+
+      const nameError = document.getElementById("nameError");
+      const emailError = document.getElementById("emailError");
+      const passwordError = document.getElementById("passwordError");
+      const confirmError = document.getElementById("confirmError");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        // Hide all errors
+        [nameError, emailError, passwordError, confirmError].forEach(
+          (el) => (el.style.display = "none"),
+        );
+        let valid = true;
+
+        const fullName = fullNameInput.value.trim();
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
+        const confirmPassword = confirmPasswordInput.value;
+        const role = roleSelect.value;
+
+        if (!fullName) {
+          nameError.style.display = "block";
+          valid = false;
+        }
+        if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+          emailError.style.display = "block";
+          valid = false;
+        }
+        if (!password || password.length < 4) {
+          passwordError.style.display = "block";
+          valid = false;
+        }
+        if (password !== confirmPassword) {
+          confirmError.style.display = "block";
+          valid = false;
+        }
+        if (!role) {
+          alert("Please select a role.");
+          valid = false;
+        }
+
+        if (valid) {
+          // Store user in localStorage array (mock database)
+          const existingUsers =
+            JSON.parse(localStorage.getItem("stackly_users")) || [];
+          existingUsers.push({
+            fullName,
+            email,
+            password, // In a real app never store plain text! This is just mock.
+            role,
+            createdAt: new Date().toISOString(),
+          });
+          localStorage.setItem("stackly_users", JSON.stringify(existingUsers));
+
+          // Optional: show success and redirect
+          alert("Account created! Redirecting to login.");
+          window.location.href = "login.html";
+        }
+      });
+    </script>
+  </body>
+</html>

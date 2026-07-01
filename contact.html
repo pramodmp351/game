@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact STACKLY - Get in touch with our support team, find our address, and check FAQ."
+    />
+    <title>STACKLY - Contact Us | Support & Inquiries</title>
+    <link
+      rel="icon"
+      type="image/webp"
+      href="data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAgA0JaQAA3AA/vuUAAA="
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+  </head>
+  <body>
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+    <div class="cursor-follower" id="cursorFollower" aria-hidden="true"></div>
+    <nav
+      class="navbar"
+      id="navbar"
+      role="navigation"
+      aria-label="Main navigation"
+    >
+      <div class="navbar-container">
+        <a href="index.html" class="navbar-logo"
+          ><img
+            class="logo"
+            src="./assets/logo.webp"
+            alt="STACKLY Logo"
+            width="48"
+            height="48"
+            onclick="window.location.href = 'index.html'"
+            style="cursor: pointer"
+        /></a>
+        <ul class="navbar-menu" id="navbarMenu">
+          <li role="none"><a href="index.html" class="navbar-link">Home</a></li>
+          <li role="none">
+            <a href="games.html" class="navbar-link">Games</a>
+          </li>
+          <li role="none">
+            <a href="about.html" class="navbar-link active" aria-current="page"
+              >About</a
+            >
+          </li>
+          <li role="none"><a href="blog.html" class="navbar-link">Blog</a></li>
+          <li role="none">
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+        </ul>
+        <div class="navbar-actions">
+          <button
+            class="btn btn-outline btn-sm login-btn"
+            onclick="window.location.href = 'login.html'"
+          >
+            Login</button
+          ><button
+            class="hamburger"
+            id="hamburger"
+            aria-label="Toggle navigation menu"
+          >
+            <span class="hamburger-line"></span
+            ><span class="hamburger-line"></span
+            ><span class="hamburger-line"></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-bg"></div>
+      <div class="mobile-menu-content">
+        <a href="index.html" class="mobile-link">Home</a
+        ><a href="games.html" class="mobile-link">Games</a
+        ><a href="about.html" class="mobile-link active">About</a
+        ><a href="blog.html" class="mobile-link">Blog</a
+        ><a href="contact.html" class="mobile-link">Contact</a
+        ><button
+          class="btn btn-primary mobile-login-btn"
+          onclick="window.location.href = 'login.html'"
+        >
+          Login
+        </button>
+      </div>
+    </div>
+    <main>
+      <section class="section" style="padding-top: 7rem">
+        <div class="section-container">
+          <div class="section-header">
+            <span class="section-badge">📧 Get In Touch</span>
+            <h2 class="section-title">
+              Contact <span class="accent">STACKLY</span>
+            </h2>
+          </div>
+          <div class="contact-grid">
+            <form class="contact-form" action="./404.html">
+              <div class="form-group">
+                <input type="text" placeholder="Your Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Address" required />
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="5"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Send Message
+              </button>
+            </form>
+            <div class="contact-info-cards">
+              <div class="info-card">
+                <span>📍</span>
+                <div>
+                  <strong>Address</strong>
+                  <p>123 Gaming Blvd, San Francisco, CA</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <span>📧</span>
+                <div>
+                  <strong>Email</strong>
+                  <p>support@stackly.com</p>
+                </div>
+              </div>
+              <div class="info-card">
+                <span>📞</span>
+                <div>
+                  <strong>Phone</strong>
+                  <p>+1 (555) 123-4567</p>
+                </div>
+              </div>
+              <div class="map-placeholder">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.019123456789!2d-122.419415484681!3d37.774929779759!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085809c5b5b5b5b%3A0x123456789abcdef0!2s123%20Gaming%20Blvd%2C%20San%20Francisco%2C%20CA%2094103!5e0!3m2!1sen!2sus!4v1610000000000"
+                  width="100%"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="footer-logo" aria-label="STACKLY Home">
+              <img
+                class="logo"
+                src="./assets/logo.webp"
+                alt="STACKLY Logo"
+                width="40"
+                height="40"
+              />
+              <!-- <span class="logo-text">STACKLY</span> -->
+            </a>
+            <p>
+              The ultimate gaming platform for players worldwide. Discover,
+              connect, and dominate.
+            </p>
+            <div class="footer-social">
+              <a href="./404.html" class="social-link" aria-label="Discord"
+                >💬</a
+              >
+              <a href="./404.html" class="social-link" aria-label="Twitter"
+                >🐦</a
+              >
+              <a href="./404.html" class="social-link" aria-label="YouTube"
+                >▶️</a
+              >
+              <a href="./404.html" class="social-link" aria-label="Twitch"
+                >📺</a
+              >
+              <a href="./404.html" class="social-link" aria-label="Instagram"
+                >📷</a
+              >
+            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <a href="index.html">Home</a>
+            <a href="games.html">Games</a>
+            <a href="about.html">About</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+          <div class="footer-links">
+            <h4>Games</h4>
+            <a href="games.html?category=fps">FPS</a>
+            <a href="games.html?category=action">Action</a>
+            <a href="games.html?category=rpg">RPG</a>
+            <a href="games.html?category=racing">Racing</a>
+            <a href="games.html?category=strategy">Strategy</a>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <a href="blog.html">Blog</a>
+            <a href="./404.html">FAQ</a>
+            <a href="./404.html">Support</a>
+            <a href="./404.html">Privacy Policy</a>
+            <a href="./404.html">Terms of Service</a>
+          </div>
+          <div class="footer-newsletter">
+            <h4>Newsletter</h4>
+            <p>Get gaming news straight to your inbox.</p>
+            <form
+              class="footer-newsletter-form"
+              aria-label="Footer newsletter"
+              action="./404.html"
+            >
+              <input
+                type="email"
+                class="input-field"
+                placeholder="Your email"
+                required
+                aria-label="Email for newsletter"
+              />
+              <button type="submit" class="btn btn-primary btn-sm">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2026 STACKLY. All rights reserved.</p>
+          <div class="footer-bottom-links">
+            <a href="./404.html">Privacy Policy</a>
+            <a href="./404.html">Terms</a>
+            <a href="./404.html">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <button class="back-to-top" id="backToTop">
+      <svg width="20" height="20" viewBox="0 0 24 24">
+        <path
+          d="M12 19V5M5 12l7-7 7 7"
+          stroke="currentColor"
+          stroke-width="2"
+        />
+      </svg>
+    </button>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="./main.js"></script>
+    <script src="js/contact.js"></script>
+  </body>
+</html>
