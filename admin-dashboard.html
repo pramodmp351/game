@@ -127,6 +127,11 @@
         flex-wrap: wrap;
         gap: 1rem;
       }
+      .top-bar-left {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
       .hamburger {
         display: none;
         flex-direction: column;
@@ -141,6 +146,16 @@
         height: 3px;
         background: var(--text);
         border-radius: 2px;
+      }
+      /* Mobile logo – hidden on desktop, visible on mobile */
+      .mobile-logo {
+        display: none;
+        cursor: pointer;
+      }
+      .mobile-logo img {
+        width: 80px;
+        height: auto;
+        filter: drop-shadow(0 0 6px var(--cyan));
       }
       .btn-logout {
         background: transparent;
@@ -237,6 +252,25 @@
         .hamburger {
           display: flex;
         }
+        /* Show mobile logo on small screens */
+        .mobile-logo {
+          display: flex;
+          align-items: center;
+        }
+        /* Adjust top-bar layout for mobile */
+        .top-bar {
+          flex-wrap: nowrap;
+        }
+        .top-bar .btn-logout {
+          flex-shrink: 0;
+        }
+        .top-bar-left {
+          flex-shrink: 0;
+        }
+        /* Hide the greeting text on very small screens to make room */
+        .top-bar-greeting {
+          display: none;
+        }
       }
     </style>
   </head>
@@ -265,10 +299,21 @@
 
     <main class="main">
       <div class="top-bar">
-        <button class="hamburger" id="menuToggle" aria-label="Toggle menu">
-          <span></span><span></span><span></span>
-        </button>
-        <div>
+        <div class="top-bar-left">
+          <button class="hamburger" id="menuToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+          </button>
+          <!-- Mobile logo – visible only on small screens -->
+          <a class="mobile-logo" href="./index.html" title="STACKLY Home">
+            <img
+              src="./assets/logo.webp"
+              alt="STACKLY"
+              width="80"
+              height="36"
+            />
+          </a>
+        </div>
+        <div class="top-bar-greeting">
           <h2 style="font-family: &quot;Orbitron&quot;, sans-serif">
             Admin Panel
           </h2>
